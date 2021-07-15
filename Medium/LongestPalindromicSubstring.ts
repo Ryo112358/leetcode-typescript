@@ -1,5 +1,5 @@
 /*
- * Problem: Longest Palindromic Substring
+ * Problem: 5. Longest Palindromic Substring
  * Acceptance Rate: 31.0%
  * URL: https://leetcode.com/problems/longest-palindromic-substring/
  *
@@ -7,7 +7,15 @@
  * Memory Usage: 41.9 MB, less than 65.68% of TypeScript online submissions for  Longest Palindromic Substring.
  */
 
-export default class Solution {
+export default function longestPalindromeIn(s: string): string {
+    // let result = Solution.findLongestPalindrome(s);
+    // console.log(s, "->", result);
+    // return result;
+
+    return Solution.findLongestPalindrome(s);
+};
+
+class Solution {
 
     private static startIndex: number;
     private static palindromeLength: number;
@@ -26,13 +34,13 @@ export default class Solution {
         return s.substring(Solution.startIndex, Solution.startIndex + Solution.palindromeLength);
     };
 
-    private static extendPalindromeEvenLength(s: string, startingIndex: number) {
-        let left = startingIndex, right = startingIndex+1;
+    private static extendPalindromeOddLength(s: string, startingIndex: number) {
+        let left = startingIndex, right = startingIndex;
         Solution.extendPalindrome(s, left, right);
     }
 
-    private static extendPalindromeOddLength(s: string, startingIndex: number) {
-        let left = startingIndex, right = startingIndex;
+    private static extendPalindromeEvenLength(s: string, startingIndex: number) {
+        let left = startingIndex, right = startingIndex+1;
         Solution.extendPalindrome(s, left, right);
     }
 
@@ -65,14 +73,6 @@ export default class Solution {
     }
 }
 
-function longestPalindromeIn(s: string): string {
-    let result = Solution.findLongestPalindrome(s);
-
-    console.log(s, "->", result);
-
-    return result;
-};
-
 //---------------------------------------------------------------------
 // ----------                 MAIN PROGRAM                   ----------
 //---------------------------------------------------------------------
@@ -82,7 +82,7 @@ if(import.meta.main) {
     longestPalindromeIn("cbbd");
     longestPalindromeIn("weloveracecars");
 
-    // RUN: deno run Medium/LongestPalindromicSubstring.ts
+    // RUN: deno run medium/LongestPalindromicSubstring.ts
 }
 
 // --------------------------- Terminal Output: ---------------------------

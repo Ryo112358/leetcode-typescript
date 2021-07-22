@@ -4,7 +4,7 @@
  * URL: https://leetcode.com/problems/longest-palindromic-substring/
  *
  * Runtime: 96 ms, faster than 96.82% of TypeScript online submissions for Longest Palindromic Substring.
- * Memory Usage: 41.9 MB, less than 65.68% of TypeScript online submissions for  Longest Palindromic Substring.
+ * Memory Usage: 41.9 MB, less than 65.68% of TypeScript online submissions for Longest Palindromic Substring.
  */
 
 export default function longestPalindromeIn(s: string): string {

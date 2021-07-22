@@ -3,7 +3,7 @@ import { assertEquals, assertNotEquals } from '../../test_deps.ts';
 import longestPalindromeIn from '../LongestPalindromicSubstring.ts';
 
 
-// RUN: deno test medium/test/LongestPalindromicSubstring.test.ts
+// RUN: deno test Medium/test/LongestPalindromicSubstring.test.ts
 
 //---------------------------------------------------------------------
 // ----------                  UNIT TESTS                    ----------
